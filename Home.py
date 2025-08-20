@@ -6,8 +6,8 @@ import json
 import sqlite3
 from datetime import datetime, timedelta
 import os
-from ai_utils import AILendingAssistant
-from database import LendingDatabase
+from utils.ai_utils import AILendingAssistant
+from utils.database import LendingDatabase
 
 # Page configuration
 st.set_page_config(

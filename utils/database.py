@@ -5,8 +5,13 @@ import random
 import json
 
 class LendingDatabase:
-    def __init__(self, db_path="lending.db"):
-        self.db_path = db_path
+    def __init__(self, db_path=None):
+        if db_path is None:
+            # Default path: db/lending.db relative to project root
+            project_root = os.path.dirname(os.path.dirname(__file__))
+            self.db_path = os.path.join(project_root, 'db', 'lending.db')
+        else:
+            self.db_path = db_path
         self.conn = None
         
     def connect(self):

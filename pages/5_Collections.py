@@ -10,8 +10,8 @@ import sys
 
 # Add parent directory to path to import modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from ai_utils import AILendingAssistant
-from database import LendingDatabase
+from utils.ai_utils import AILendingAssistant
+from utils.database import LendingDatabase
 
 # Page configuration
 st.set_page_config(
